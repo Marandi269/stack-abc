@@ -76,10 +76,10 @@ vim local.conf
 
 ```
 bugfix:
-    sed -i 's@OVS_RUNDIR=$OVS_PREFIX/var/run/openvswitch@OVS_RUNDIR=$OVS_PREFIX/var/run/ovn@' ./lib/neutron_plugins/ovn_agent
 
+sed -i 's@OVS_RUNDIR=$OVS_PREFIX/var/run/openvswitch@OVS_RUNDIR=$OVS_PREFIX/var/run/ovn@' ./lib/neutron_plugins/ovn_agent
 
-sed -i 's@net.ipv6.conf.all.disable_ipv6 = 1@net.ipv6.conf.all.disable_ipv6 = 0@' /etc/sysctl.conf 
+sudo sed -i 's@net.ipv6.conf.all.disable_ipv6 = 1@net.ipv6.conf.all.disable_ipv6 = 0@' /etc/sysctl.conf 
 sudo sysctl -p
 
 ```

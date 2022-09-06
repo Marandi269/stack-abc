@@ -35,6 +35,13 @@ openstack:
 
 ```
 
+```
+openstack user create --domain default --password skyline  skyline 
+openstack role add --project service --user skyline admin
+```
+
+
+
 ```bash
 
 
